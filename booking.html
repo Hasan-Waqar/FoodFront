@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table - FoodFront</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class = "booking-page-body">
+
+    
+    <!-- This section is different: no header, as it's a full-page experience -->
+    <main class="booking-page-main">
+        <div class="booking-container">
+            <!-- Left Column: Image -->
+            <div class="booking-image">
+                <img src="./images/booking-image.png" alt="A couple enjoying a meal">
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="booking-form-wrapper">
+                 <a href="index.html" class="close-button">×</a>
+                <h3 class="section-subtitle">Reservation</h3>
+                <h2 class="section-title">Book A Table Online</h2>
+
+                <form>
+                    <div class="form-grid">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="datetime-local" placeholder="Date & Time" required>
+                        <select required>
+                            <option value="">No Of People</option>
+                            <option value="1">People 1</option>
+                            <option value="2">People 2</option>
+                            <option value="3">People 3</option>
+                            <option value="4">People 4</option>
+                        </select>
+                        <textarea placeholder="Special Request" rows="5"></textarea>
+                        <button type="submit" class="btn">BOOK NOW</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
