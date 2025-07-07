@@ -3,138 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodFront - Restaurant</title>
+    <title>FoodFront - Enjoy Our Delicious Meal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="container nav-container">
+        <div class="container header-container">
             <a href="#" class="logo">
                 <img src="./images/logo.svg" alt="FoodFront Logo">
             </a>
             <nav>
                 <ul>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary">Book a table</a>
+            <a href="#" class="btn">Book A Table</a>
         </div>
     </header>
 
     <main>
         <section id="hero">
             <div class="container hero-container">
-                <div class="hero-text">
-                    <p class="tagline">Discover the real taste</p>
-                    <h1>A Symphony of Flavors in Every Bite</h1>
-                    <p class="description">
-                        We are a restaurant that offers a unique dining experience, with a menu that is a fusion of traditional and modern cuisines.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#menu" class="btn btn-primary">Our Menu</a>
-                        <a href="#" class="btn btn-secondary">Book a table</a>
-                    </div>
+                <div class="hero-content">
+                    <h1>Enjoy Our<br>Delicious Meal</h1>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliquyam diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+                    <a href="#" class="btn">Book A Table</a>
                 </div>
-                <div class="hero-image">
-                    <img src="./images/hero-image.jpg" alt="A delicious dish served at the restaurant">
+                <div class="dish-image">
+                    <img src="./images/dish-image.png" alt="A delicious grilled meal on a platter">
                 </div>
             </div>
         </section>
-        <!--
+        <!-- ADD THIS NEW SECTION RIGHT AFTER THE HERO SECTION -->
+
         <section id="about">
             <div class="container about-container">
-                <div class="about-image">
-                    <img src="./assets/about-image.jpg" alt="Interior of the FoodFront restaurant">
+                <!-- Left Column: Image Grid -->
+                <!-- REPLACE IT WITH THIS -->
+                <div class="about-images">
+                    <img src="./images/multiple_foods.png" alt="A collage of restaurant photos">
                 </div>
-                <div class="about-text">
-                    <h2>About Us</h2>
-                    <h3>A team of passionate chefs and food lovers.</h3>
-                    <p>
-                        Our journey began with a simple idea: to create a place where people can enjoy high-quality food in a cozy and welcoming atmosphere. We believe in using fresh, locally-sourced ingredients to craft dishes that are both delicious and memorable.
+
+                <!-- Right Column: Text Content -->
+                <div class="about-content">
+                    <h3 class="section-subtitle">About Us</h3>
+                    <h2 class="section-title">Welcome to <img src="./images/icon-food.png" alt="utensils icon"> Restaurant</h2>
+                    <p class="section-text">
+                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliquyam diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
                     </p>
+                    <p class="section-text">
+                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliquyam diam amet diam et eos. Clita erat ipsum et lorem et sit.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="number">13</span>
+                            <p>Years of<br><strong>EXPERIENCE</strong></p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number">50</span>
+                            <p>Popular<br><strong>MASTER CHEFS</strong></p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Read More</a>
                 </div>
             </div>
         </section>
-        -->
-        <section id="menu">
+        <section id="features">
             <div class="container">
-                <div class="section-header">
-                    <h2>Our Menu</h2>
-                    <p>Explore our wide range of dishes, crafted with love and passion.</p>
-                </div>
-                <div class="menu-grid">
-                    <!-- Menu Item 1 -->
-                    <div class="menu-card">
-                        <img src="./images/menu-1.jpg" alt="Spaghetti Bolognese">
-                        <div class="card-content">
-                            <h3>Spaghetti Bolognese</h3>
-                            <span class="price">$12.99</span>
-                        </div>
+                <!-- The grid container must wrap the feature cards directly -->
+                <div class="features-grid">
+
+                    <!-- Card 1 -->
+                    <div class="feature-card">
+                        <!-- The link goes INSIDE the card -->
+                        <a href="#">
+                            <img src="./images/icon-chef.png" alt="Chef Icon" class="icon">
+                            <h3>Master Chefs</h3>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </a>
                     </div>
-                    <!-- Menu Item 2 -->
-                    <div class="menu-card">
-                        <img src="./assets/menu-2.jpg" alt="Margherita Pizza">
-                        <div class="card-content">
-                            <h3>Margherita Pizza</h3>
-                            <span class="price">$14.50</span>
-                        </div>
+
+                    <!-- Card 2 -->
+                    <div class="feature-card">
+                        <a href="#">
+                            <img src="./images/icon-food.png" alt="Food Icon" class="icon">
+                            <h3>Quality Food</h3>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </a>
                     </div>
-                    <!-- Menu Item 3 -->
-                    <div class="menu-card">
-                        <img src="./assets/menu-3.jpg" alt="Caesar Salad">
-                        <div class="card-content">
-                            <h3>Caesar Salad</h3>
-                            <span class="price">$9.75</span>
-                        </div>
+
+                    <!-- Card 3 -->
+                    <div class="feature-card">
+                        <a href="#">
+                            <img src="./images/icon-cart.png" alt="Cart Icon" class="icon">
+                            <h3>Online Order</h3>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </a>
                     </div>
-                    <!-- Menu Item 4 -->
-                    <div class="menu-card">
-                        <img src="./assets/menu-4.jpg" alt="Chocolate Lava Cake">
-                        <div class="card-content">
-                            <h3>Chocolate Lava Cake</h3>
-                            <span class="price">$7.50</span>
-                        </div>
+
+                    <!-- Card 4 -->
+                    <div class="feature-card">
+                        <a href="#">
+                            <img src="./images/icon-headset.png" alt="Service Icon" class="icon">
+                            <h3>24/7 Service</h3>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <!-- ADD THIS NEW TESTIMONIAL SECTION -->
+        <section id="testimonials">
             <div class="container">
-                <div class="section-header">
-                    <h2>Get in Touch</h2>
-                    <p>Have questions or want to book a table? Contact us!</p>
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h3 class="section-subtitle">Testimonial</h3>
+                    <h2 class="section-title" style="justify-content: center;">Our Clients Say!!!</h2>
                 </div>
-                <div class="contact-info">
-                    <p><strong>Phone:</strong> +1 (234) 567-890</p>
-                    <p><strong>Email:</strong> booking@foodfront.com</p>
-                    <p><strong>Address:</strong> 123 Flavor Street, Food City, 12345</p>
-                </div>
-                <div class="contact-button-wrapper">
-                    <a href="#" class="btn btn-primary">Book a table online</a>
+                <div class="testimonials-grid">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-card">
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.</p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Client Name</h4>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 (Highlighted) -->
+                    <div class="testimonial-card">
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.</p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Client Name</h4>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-card">
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.</p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Client Name</h4>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="container footer-container">
-                <div class="footer-left">
-                    <a href="#" class="footer-logo">
-                        <img src="./images/logo.svg" alt="FoodFront Logo">
-                    </a>
-                    <p>© 2024 FoodFront. All rights reserved.</p>
-                </div>
-                <div class="footer-right">
-                    <a href="#"><img src="./assets/icon-facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="./assets/icon-instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="./assets/icon-twitter.svg" alt="Twitter"></a>
-                </div>
-            </div>
-        </footer>
     </main>
 
-    <!-- Footer will go here -->
-
 </body>
+<!-- REPLACE YOUR OLD FOOTER WITH THIS -->
+<footer class="main-footer">
+    <div class="container footer-container">
+        <div class="footer-left">
+            <p>© Your Site Name, All Right Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
 </html>
