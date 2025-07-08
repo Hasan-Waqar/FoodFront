@@ -545,7 +545,7 @@ nav a:hover { color: var(--primary-color); }
 
 /* -------------- CONTACT US PAGE -------------- */
 #page-hero {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(./assets/hero-image.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(./images/hero-image.jpg);
     background-position: center;
     background-size: cover;
     padding: 120px 0;
@@ -647,4 +647,146 @@ nav a:hover { color: var(--primary-color); }
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TABLET VIEW (Screens up to 992px wide)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    /* --- GENERAL --- */
+    .container {
+        max-width: 960px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+
+    /* --- HOMEPAGE: HERO --- */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    /* --- HOMEPAGE: ABOUT US --- */
+    .about-container {
+        flex-direction: column;
+    }
+    .about-stats {
+        justify-content: center;
+    }
+
+    /* --- HOMEPAGE: FEATURES --- */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    }
+
+    /* --- HOMEPAGE: TESTIMONIALS --- */
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Stack testimonials early */
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    /* --- CONTACT PAGE --- */
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* --- BOOKING PAGE --- */
+    .booking-container {
+        flex-direction: column;
+    }
+    .booking-page-body {
+        height: auto;
+        overflow: auto; /* Allow scrolling on tablet */
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE PHONE VIEW (Screens up to 768px wide)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* --- GENERAL HEADER --- */
+    header nav {
+        display: none; /* Hide nav links on mobile. A JS hamburger menu would go here. */
+    }
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    /* --- HOMEPAGE: HERO --- */
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    /* --- HOMEPAGE: ABOUT US --- */
+    .about-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .stat-item:last-child {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid var(--primary-color);
+        padding-top: 30px;
+    }
+
+    /* --- HOMEPAGE: FEATURES --- */
+    .features-grid {
+        grid-template-columns: 1fr; /* Stack feature cards vertically */
+    }
+    
+    /* --- MENU PAGE --- */
+    .menu-tabs ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    /* --- BOOKING PAGE --- */
+    .booking-image {
+        display: none; /* Hide the image on mobile to focus on the form */
+    }
+    .booking-form-wrapper {
+        flex-basis: 100%;
+        padding: 40px 20px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr; /* Stack form fields */
+    }
+    .form-grid textarea,
+    .form-grid button {
+        grid-column: 1; /* Reset the span */
+    }
+    
+    /* --- CONTACT PAGE --- */
+    .contact-info-cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+    #page-hero {
+        padding: 80px 0;
+    }
+    #page-hero h1 {
+        font-size: 40px;
+    }
+
+    /* --- FOOTER --- */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
