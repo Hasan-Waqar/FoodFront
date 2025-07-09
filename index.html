@@ -22,124 +22,18 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="booking.html" class="btn">Book A<br>Table</a>
+            <a href="#booking-pg" class="btn">Book A Table</a>
         </div>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1>Enjoy Our<br>Delicious Meal</h1>
-                    <p>Experience a culinary journey like no other, where every dish is a masterpiece crafted with passion. We bring you the finest ingredients for an unforgettable dining adventure.</p>
-                    <a href="booking.html" class="btn">Book A Table</a>
-                </div>
-                <div class="dish-image">
-                    <img src="./images/dish-image.png" alt="A delicious grilled meal on a platter">
-                </div>
-            </div>
-        </section>
-        
-        <section id="about">
-            <div class="container about-container">
-                <div class="about-images">
-                    <img src="./images/multiple-foods.png" alt="A collage of restaurant photos">
-                </div>
-                <div class="about-content">
-                    <h3 class="section-subtitle">About Us</h3>
-                    <h2 class="section-title">Welcome to Restaurant</h2>
-                    <p class="section-text">
-                        Our story began with a simple passion for creating unforgettable meals. We believe in the magic of fresh, locally-sourced ingredients, combined to craft dishes that delight the senses.
-                    </p>
-                    <p class="section-text">
-                        From our kitchen to your table, we are dedicated to providing a warm, welcoming atmosphere where every guest feels like family. Join us and taste the difference that dedication makes.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="number">13</span>
-                            <p>Years of<br><strong>EXPERIENCE</strong></p>
-                        </div>
-                        <div class="stat-item">
-                            <span class="number">50</span>
-                            <p>Popular<br><strong>MASTER CHEFS</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="features">
-            <div class="container">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <a href="chefs.html">
-                            <img src="./images/icon-chef.png" alt="Chef Icon" class="icon">
-                            <h3>Master Chefs</h3>
-                            <p>Our kitchen is led by world-class chefs with a passion for culinary excellence.</p>
-                        </a>
-                    </div>
-                    <div class="feature-card">
-                        <a href="menu.html">
-                            <img src="./images/icon-food.png" alt="Food Icon" class="icon">
-                            <h3>Quality Food</h3>
-                            <p>We source only the freshest, highest-quality ingredients for every dish we serve.</p>
-                        </a>
-                    </div>
-                    <div class="feature-card">
-                        <a href="booking.html">
-                            <img src="./images/icon-cart.png" alt="Cart Icon" class="icon">
-                            <h3>Online Order</h3>
-                            <p>Enjoy your favorite meals from the comfort of home with our easy online ordering.</p>
-                        </a>
-                    </div>
-                    <div class="feature-card">
-                        <a href="#features-grid">
-                            <img src="./images/icon-headset.png" alt="Service Icon" class="icon">
-                            <h3>24/7 Service</h3>
-                            <p>Our team is dedicated to providing you with exceptional service around the clock.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <div class="container">
-                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                    <h3 class="section-subtitle">Testimonial</h3>
-                    <h2 class="section-title" style="justify-content: center;">Our Clients Say!!!</h2>
-                </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p>An absolutely amazing experience! The food was divine, and the atmosphere was perfect. We will definitely be back.</p>
-                        <div class="client-info">
-                            <div class="client-details">
-                                <h4>Jessica Miller</h4>
-                                <small>Food Critic</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>The best restaurant in town, hands down. Every dish was a work of art. Highly recommend the chef's special!</p>
-                        <div class="client-info">
-                            <div class="client-details">
-                                <h4>David Chen</h4>
-                                <small>Enthusiast</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>From the moment we walked in, the service was exceptional. A truly memorable evening. A must-visit for any food lover.</p>
-                        <div class="client-info">
-                            <div class="client-details">
-                                <h4>Sarah Jones</h4>
-                                <small>Local Guide</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div include-html="hero.html"></div>
+    <div include-html="features.html"></div>
+    <div include-html="about.html"></div>
+    <div include-html="menu.html"></div>
+    <div include-html="booking.html"></div>
+    <div include-html="chefs.html"></div>
+    <div include-html="testimonials.html"></div>
     </main>
 
     <footer class="main-footer">
@@ -157,6 +51,27 @@
             </div>
         </div>
     </footer>
+
+<script>
+function includeHTML() {
+  const elements = document.querySelectorAll('[include-html]');
+  elements.forEach(el => {
+    const file = el.getAttribute('include-html');
+    fetch(file)
+      .then(response => {
+        if (!response.ok) throw new Error(`Could not fetch ${file}`);
+        return response.text();
+      })
+      .then(data => {
+        el.innerHTML = data;
+        el.removeAttribute('include-html');
+        includeHTML();
+      })
+      .catch(error => console.log(error));
+  });
+}
+includeHTML();
+</script>
 
 </body>
 </html>
